@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{head.title} | {global.appName}</title>
+    <meta name="description" description="{head.description}">
+    <base href="/">
+    <!--Static Assets-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="static/app.css">
+    
+</head>
+<body class="{body.class}">
+    <!--Page Wrapper-->
+    <div class="root">
+        <header class="header">
+            <!--Nav bar-->
+            <nav class="navbar">
+                <a class="logo" href="/">
+                    <img src="static/logo.png" alt="logo"/>
+                </a>
+                <ul class="menu" id="menu">
+                    <li class="list-item">
+                        <a class="list-item-text" href="/"><span>Home</span></a>
+                    </li>
+                    <li class="list-item loggedOut">
+                            <a class="list-item-text " href="/account/create"><span>SignUp</span></a>
+                    </li>
+                    <li class="list-item loggedOut">
+                            <a class="list-item-text " href="/session/create"><span>Login</span></a>
+                    </li>
+                    <li class="list-item loggedIn">
+                            <a class="list-item-text " href="/checks/all"><span>Dashboard</span></a>
+                    </li>
+                    <li class="list-item loggedIn">
+                            <a class="list-item-text " href="/account/edit"><span>Account Settings</span> </a>
+                    </li>
+                    <li class="list-item loggedIn" id="logout">
+                            <span class="list-item-text" ><span>Logout</span></span>
+                    </li>
+                </ul>
+                <div class="menu-icon" id="menu-icon"><span>MENU</span></div>
+            </nav>
+        </header>
+        <!--Page Content-->
+        <div class="container">

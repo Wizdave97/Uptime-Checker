@@ -1,0 +1,37 @@
+<div class="jumbotron">
+        <div class="form-title"> 
+                <h1>{form.title}</h1>
+        </div>
+        <div class="form-error" id="form-error"></div>
+        <form class="form"  novalidate id="editcheck-form">
+            <div class="form-group">
+                <label for="protocol">Protocol</label>
+                <input class="form-input" name="protocol" id="protocol" type="text" required="true" minlength="4" placeholder="http"/>
+                <span id="protocol-error" class="error">Protocol is required with minimum of 4 characters</span>
+            </div>
+            <div class="form-group">
+                <label for="method">Method</label>
+                <input class="form-input" type="text" id="method" name="method" required="true" minlength="3" placeholder="GET"/>
+                <span id="method-error" class="error">method is required with minimum of 3  characters</span>
+            </div>
+            <div class="form-group">
+                <label for="timeoutSeconds">Timeout Seconds</label>
+                <input class="form-input" id="timeoutSeconds" type="number" name="timeoutSeconds" required="true" min="1" max="5" placeholder="3"/>
+                <span id="timeoutSeconds-error" class="error">Timeout must be between 1 and 5</span>
+            </div>
+            <div class="form-group">
+                <label for="url">Url</label>
+                <input class="form-input" id="url" type="text" name="url" required="true" minlength="4" placeholder="twitter.com"/>
+                <span id="url-error" class="error">Valid Url is required</span>
+            </div>
+            <div class="form-group">
+                    <label for="successCodes">Success Codes</label>
+                    <input class="form-input" id="successCodes" type="text" name="successCodes" required="true"  placeholder="200,204"/>
+                    <span id="successCodes-error" class="error">success Codes muust be a number or numbers separated by comma</span>
+            </div>
+            <button type="submit" class="action-button green" id="modify-check" ><span>Update Check</span></button>
+            <button type="button" class="action-button navy" id="delete-check" ><span>Delete Check</span></button>
+        </form>
+     
+    </div>
+    
