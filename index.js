@@ -7,17 +7,20 @@
 // Dependencies
 const server=require('./lib/server.js')
 const workers=require('./lib/workers')
+const cli=require('./lib/cli')
 
 const app={}
 
 app.init=function(){
 
     //Start the Workers
-    workers.init()
+    //workers.init()
     
     //Start the Server
     server.init()
-
+    setTimeout(()=>{
+        cli.init()
+    },2000)
     
 }
 
