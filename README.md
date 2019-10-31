@@ -1,6 +1,6 @@
 ## UPTIME CHECKING AND MONITORING APP
 
-Built with pure node.js no frameworks or NPM 
+Built with pure node.js no frameworks or NPM, complete with a test runner 
 
 ## RUNNING THE APP
 

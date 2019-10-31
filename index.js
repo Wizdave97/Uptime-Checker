@@ -11,21 +11,23 @@ const cli=require('./lib/cli')
 
 const app={}
 
-app.init=function(){
+app.init=function(callback){
 
     //Start the Workers
-    //workers.init()
+    workers.init()
     
     //Start the Server
     server.init()
     setTimeout(()=>{
         cli.init()
-    },2000)
+        callback()
+    },1000)
     
 }
 
 //Execute App
-app.init()
-
+if(require.main === module){
+    app.init(()=>{})
+}
 //Export module
 module.exports=app
