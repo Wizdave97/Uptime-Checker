@@ -239,8 +239,8 @@ app.form.checkValidity=function(){
 app.form.processResponse=function(status,requestPayload,responsePayload){
     if(status==200 || status==204){
         location.pathname='checks/all'
-        if(typeof responsePayload.token =='string')  {
-            app.client.storeSession(responsePayload)
+        if(typeof responsePayload.tokenObject.token =='string')  {
+            app.client.storeSession(responsePayload.tokenObject)
             app.client.autoLogIn();
             app.client.authCheckTimeout()
         }
@@ -305,7 +305,7 @@ app.login.submitForm=function(){
         }
         app.client.request('POST',null,'api/tokens',null,payload).then(res=>{
             console.log(res)
-            app.form.processResponse(res.status,null,res.tokenObject)
+            app.form.processResponse(res.status,null,res)
         }).catch(err=>{
             app.form.processResponse(err.status,null,err)
         })
@@ -420,7 +420,7 @@ app.account.updateAccount=function(){
             }
             payload[name]=input.value
         }
-        app.client.request('PUT',null,'api/users',{id:app.config.phone},payload).then(res=>{
+        app.client.request('PUT',null,'api/users',{phone:app.config.phone},payload).then(res=>{
             app.form.processResponse(res.status,null,res)
         }).catch(err=>{
             app.form.processResponse(err.status,null,err)

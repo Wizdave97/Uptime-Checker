@@ -1,0 +1,30 @@
+{
+  "name": "uptime-checker",
+  "version": "1.0.0",
+  "description": "uptime checking app",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "dependencies": {
+    "level-sublevel": "^6.6.5",
+    "leveldown": "^5.4.1",
+    "levelup": "^4.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wizdave97/Uptime-Checker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wizdave97/Uptime-Checker/issues"
+  },
+  "homepage": "https://github.com/Wizdave97/Uptime-Checker#readme"
+}
